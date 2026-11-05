@@ -24,7 +24,7 @@ type TLink = {
     img?: { url: string }[];
 };
 
-const basePath = "https://www.scichart.com";
+const basePath = "https://scichart.com";
 
 console.log("Generating sitemap...");
 
@@ -38,7 +38,7 @@ console.log("Generating sitemap...");
     // Add pages links
     Object.values(PAGES).forEach((el) => {
         links.push({
-            url: `${baseAppPath}${el.path}`,
+            url: el.path,
             changefreq: EChangeFreq.Weekly,
             priority: 1,
             lastmod,
